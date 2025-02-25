@@ -1,0 +1,28 @@
+.roadmap-card {
+    perspective: 1000px;
+  }
+  
+  .roadmap-card .card-content {
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .roadmap-card:hover .card-content {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .icon-container {
+      position: relative;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .icon-container svg {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  
