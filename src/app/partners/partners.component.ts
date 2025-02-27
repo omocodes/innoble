@@ -61,7 +61,7 @@ export class PartnersComponent implements OnInit {
   partners = [
     { logo: 'https://www.aions.co.za/wp-content/uploads/2018/10/Levels-Logo-1024x1024-1160x665.png', url: 'https://www.aions.co.za' },
     { logo: 'https://www.aions.co.za/wp-content/uploads/2022/02/Aions-logo-web-wht.png', url: 'https://www.aions.co.za' },
-    { logo: 'https://d2ksis2z2ke2jq.cloudfront.net/uploads/2023/04/MicrosoftTeams-image-16.png', url: 'https://www.microsoft.com' },
+    { logo: 'https://d2ksis2z2ke2jq.cloudfront.net/uploads/2023/04/MicrosoftTeams-image-16.png', url: 'https://www.groupm.com/' },
     { logo: 'https://www.innovatortrust.co.za/img/Logo.png?v=1.2', url: 'https://www.innovatortrust.co.za' },
     { logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQFrgF8kuc_GRA/company-logo_200_200/company-logo_200_200/0/1630562487222?e=2147483647&v=beta&t=mRkusPflI2zfenfWJx87d7wXUeQo3rorLVspIFJOat0', url: 'https://www.linkedin.com' },
     { logo: 'https://mavensolutions.co.za/wp-content/uploads/2020/06/maven-logo-no-title.png', url: 'https://mavensolutions.co.za' },

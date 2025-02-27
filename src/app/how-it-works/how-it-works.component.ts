@@ -4,26 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-how-it-works',
   standalone: true,
   template: `
-    <section class="relative w-full overflow-hidden bg-gradient-to-br from-blue-50 via-white to-blue-50 py-24">
-      <!-- Grid pattern background -->
-      <div class="absolute inset-0 overflow-hidden">
-        <!-- Grid pattern -->
-        <div class="absolute inset-0 opacity-10">
-          <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-            <defs>
-              <pattern id="grid-how-it-works" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="black" stroke-width="0.5"/>
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#grid-how-it-works)" />
-          </svg>
-        </div>
-
-        <!-- Animated floating elements -->
-        <div class="animate-float-slow absolute -right-32 top-0 h-64 w-64 rounded-full bg-blue-500/20 blur-3xl"></div>
-        <div class="animate-float-medium absolute -left-32 bottom-0 h-96 w-96 rounded-full bg-teal-500/20 blur-3xl"></div>
-      </div>
-
+    <section class="relative w-full overflow-hidden bg-white py-24">
       <div class="container relative mx-auto px-4">
         <!-- Section header -->
         <div class="mx-auto max-w-3xl text-center">
@@ -38,8 +19,7 @@ import { Component } from '@angular/core';
         <!-- Steps grid -->
         <div class="grid gap-8 md:grid-cols-3">
           <!-- Step 1 -->
-          <div class="animate-fade-in-up group relative rounded-2xl border border-gray-200 bg-white/80 p-8 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-blue-200 hover:bg-white [animation-delay:300ms]">
-            <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 opacity-0 blur transition duration-300 group-hover:opacity-100"></div>
+          <div class="animate-fade-in-up group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:border-blue-200 hover:bg-white [animation-delay:300ms]">
             <div class="relative">
               <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-600">
                 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -47,7 +27,7 @@ import { Component } from '@angular/core';
                 </svg>
               </div>
               <h3 class="mb-3 text-xl font-semibold text-gray-900">Register & Create Profile</h3>
-              <p class="mb-4 text-gray-600">Create your account and tell us about your business. We'll guide you through setting up your compliance profile.</p>
+              <p class="mb-4 text-base text-gray-600">Create your account and tell us about your business. We'll guide you through setting up your compliance profile.</p>
               <ul class="space-y-2 text-sm text-gray-600">
                 <li class="flex items-center">
                   <svg class="mr-2 h-4 w-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -66,8 +46,7 @@ import { Component } from '@angular/core';
           </div>
 
           <!-- Step 2 -->
-          <div class="animate-fade-in-up group relative rounded-2xl border border-gray-200 bg-white/80 p-8 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-blue-200 hover:bg-white [animation-delay:400ms]">
-            <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 opacity-0 blur transition duration-300 group-hover:opacity-100"></div>
+          <div class="animate-fade-in-up group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:border-blue-200 hover:bg-white [animation-delay:400ms]">
             <div class="relative">
               <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-600">
                 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -75,7 +54,7 @@ import { Component } from '@angular/core';
                 </svg>
               </div>
               <h3 class="mb-3 text-xl font-semibold text-gray-900">Set Your Goals</h3>
-              <p class="mb-4 text-gray-600">Tell us your business objectives and compliance needs. We'll create a personalized roadmap.</p>
+              <p class="mb-4 text-base text-gray-600">Tell us your business objectives and compliance needs. We'll create a personalized roadmap.</p>
               <ul class="space-y-2 text-sm text-gray-600">
                 <li class="flex items-center">
                   <svg class="mr-2 h-4 w-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -94,8 +73,7 @@ import { Component } from '@angular/core';
           </div>
 
           <!-- Step 3 -->
-          <div class="animate-fade-in-up group relative rounded-2xl border border-gray-200 bg-white/80 p-8 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-blue-200 hover:bg-white [animation-delay:500ms]">
-            <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 opacity-0 blur transition duration-300 group-hover:opacity-100"></div>
+          <div class="animate-fade-in-up group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:border-blue-200 hover:bg-white [animation-delay:500ms]">
             <div class="relative">
               <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-600">
                 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -103,7 +81,7 @@ import { Component } from '@angular/core';
                 </svg>
               </div>
               <h3 class="mb-3 text-xl font-semibold text-gray-900">Upload & Automate</h3>
-              <p class="mb-4 text-gray-600">Upload your documents and let our AI-powered system handle the compliance process.</p>
+              <p class="mb-4 text-base text-gray-600">Upload your documents and let our AI-powered system handle the compliance process.</p>
               <ul class="space-y-2 text-sm text-gray-600">
                 <li class="flex items-center">
                   <svg class="mr-2 h-4 w-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">

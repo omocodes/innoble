@@ -2,13 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
     LucideAngularModule,
-    Rocket,
-    Zap,
-    Wallet,
     ArrowRight,
-    Users,
-    Database,
-    Heart
 } from 'lucide-angular';
 import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 
@@ -17,7 +11,7 @@ import { trigger, transition, style, animate, query, stagger } from '@angular/an
     standalone: true,
     imports: [CommonModule, LucideAngularModule],
     template: `
-    <section class="relative py-16 bg-gray-50 overflow-hidden">
+    <section class="relative py-12 bg-gray-50 overflow-hidden">
         <!-- Floating Gradient Orbs -->
         <div class="absolute inset-0 overflow-hidden">
             <div class="orb-1"></div>
@@ -28,14 +22,14 @@ import { trigger, transition, style, animate, query, stagger } from '@angular/an
         <!-- Content Container -->
         <div class="container mx-auto px-4 relative z-10">
             <!-- Header Section -->
-            <div class="flex flex-col items-center mb-12">
-                <div class="glowing-badge mb-4 px-4 py-1 rounded-full bg-white/90 backdrop-blur border border-gray-200">
+            <div class="flex flex-col items-center mb-8">
+                <div class="glowing-badge mb-2 px-3 py-1 rounded-full bg-white/90 backdrop-blur border border-gray-200">
                     <span class="text-xs font-medium bg-gradient-to-r from-rose-500 to-orange-500 bg-clip-text text-transparent">
                         Trusted by 10,000+ businesses
                     </span>
                 </div>
 
-                <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 leading-tight">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-3 leading-tight">
                     Why businesses choose
                     <span class="relative">
                         <span class="absolute -inset-1 rounded-lg bg-gradient-to-r from-rose-500/20 to-orange-500/20 blur"></span>
@@ -52,8 +46,7 @@ import { trigger, transition, style, animate, query, stagger } from '@angular/an
                     <div class="feature-content" [ngClass]="feature.gradientClass">
                         <!-- Icon -->
                         <div class="feature-icon" [ngClass]="feature.iconBgClass">
-                            <i-lucide [name]="feature.icon" [ngClass]="feature.iconColor" class="w-5 h-5">
-                            </i-lucide>
+                            <img [src]="feature.iconUrl" alt="Feature Icon" class="w-8 h-8">
                         </div>
 
                         <!-- Text Content -->
@@ -80,7 +73,7 @@ import { trigger, transition, style, animate, query, stagger } from '@angular/an
             </div>
 
             <!-- Stats Section -->
-            <div class="stats-grid mt-12">
+            <div class="stats-grid mt-8">
                 <div *ngFor="let stat of stats" class="stat-item">
                     <div class="stat-value" [ngClass]="stat.color">{{ stat.value }}</div>
                     <div class="stat-label">{{ stat.label }}</div>
@@ -104,26 +97,26 @@ import { trigger, transition, style, animate, query, stagger } from '@angular/an
     }
 
     .orb-1 {
-      width: 300px;
-      height: 300px;
+      width: 200px;
+      height: 200px;
       background: radial-gradient(circle, rgba(225, 29, 72, 0.2) 0%, rgba(225, 29, 72, 0) 70%);
-      top: -100px;
-      right: -100px;
+      top: -50px;
+      right: -50px;
       animation-delay: -5s;
     }
 
     .orb-2 {
-      width: 400px;
-      height: 400px;
+      width: 300px;
+      height: 300px;
       background: radial-gradient(circle, rgba(249, 115, 22, 0.2) 0%, rgba(249, 115, 22, 0) 70%);
-      bottom: -150px;
-      left: -150px;
+      bottom: -100px;
+      left: -100px;
       animation-delay: -10s;
     }
 
     .orb-3 {
-      width: 250px;
-      height: 250px;
+      width: 150px;
+      height: 150px;
       background: radial-gradient(circle, rgba(234, 179, 8, 0.2) 0%, rgba(234, 179, 8, 0) 70%);
       top: 50%;
       left: 50%;
@@ -141,8 +134,8 @@ import { trigger, transition, style, animate, query, stagger } from '@angular/an
     /* Features Grid */
     .features-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted minmax */
+      gap: 1rem; /* Adjusted gap */
       position: relative;
     }
 
@@ -153,9 +146,9 @@ import { trigger, transition, style, animate, query, stagger } from '@angular/an
 
     .feature-content {
       position: relative;
-      padding: 1.5rem;
+      padding: 1rem; /* Adjusted padding */
       background: white;
-      border-radius: 24px;
+      border-radius: 20px; /* Adjusted border-radius */
       border: 1px solid rgba(0,0,0,0.1);
       transition: all 0.3s ease;
       overflow: hidden;
@@ -163,17 +156,17 @@ import { trigger, transition, style, animate, query, stagger } from '@angular/an
 
     .feature-item.active .feature-content {
       transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Adjusted shadow */
     }
 
     .feature-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 12px;
+      width: 40px; /* Adjusted width */
+      height: 40px; /* Adjusted height */
+      border-radius: 10px; /* Adjusted border-radius */
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem; /* Adjusted margin */
       position: relative;
       transition: all 0.3s ease;
     }
@@ -188,7 +181,7 @@ import { trigger, transition, style, animate, query, stagger } from '@angular/an
     }
 
     .feature-interaction {
-      margin-top: 1rem;
+      margin-top: 0.75rem; /* Adjusted margin */
       position: relative;
     }
 
@@ -204,7 +197,7 @@ import { trigger, transition, style, animate, query, stagger } from '@angular/an
     .learn-more {
       display: flex;
       align-items: center;
-      font-size: 0.75rem;
+      font-size: 0.7rem; /* Adjusted font size */
       font-weight: 500;
       opacity: 0;
       transform: translateY(10px);
@@ -219,13 +212,13 @@ import { trigger, transition, style, animate, query, stagger } from '@angular/an
     /* Stats Grid */
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted minmax */
+      gap: 0.75rem; /* Adjusted gap */
       text-align: center;
     }
 
     .stat-value {
-      font-size: 1.75rem; /* Reduced font size */
+      font-size: 1.25rem; /* Adjusted font size */
       font-weight: 700;
       margin-bottom: 0.25rem;
       background-clip: text;
@@ -235,16 +228,16 @@ import { trigger, transition, style, animate, query, stagger } from '@angular/an
 
     .stat-label {
       color: #6b7280;
-      font-size: 0.75rem; /* Reduced font size */
+      font-size: 0.6rem; /* Adjusted font size */
     }
 
     /* Larger screens */
     @media (min-width: 1024px) {
         .features-container {
-            grid-template-columns: repeat(3, minmax(300px, 1fr)); /* 3 columns on larger screens */
+            grid-template-columns: repeat(3, minmax(250px, 1fr)); /* Adjusted minmax */
         }
         .stats-grid {
-            grid-template-columns: repeat(4, minmax(150px, 1fr)); /* Ensure stats fit well in 4 columns */
+            grid-template-columns: repeat(4, minmax(120px, 1fr)); /* Adjusted minmax */
         }
     }
 
@@ -254,7 +247,7 @@ import { trigger, transition, style, animate, query, stagger } from '@angular/an
         grid-template-columns: 1fr;
       }
         .stat-value {
-        font-size: 1.5rem; /* Further reduce on smaller screens if needed */
+        font-size: 1rem; /* Adjusted font size */
       }
     }
   `],
@@ -278,7 +271,7 @@ export class WhyChooseComponent {
         {
             title: 'Affordable Rates',
             description: 'Get and stay compliant with competitive pricing designed for small businesses.',
-            icon: 'wallet',
+            iconUrl: 'https://cdn1.iconfinder.com/data/icons/hands-up-down/100/Sustainability-512.png',
             iconBgClass: 'bg-rose-50',
             iconColor: 'text-rose-500',
             gradientClass: 'from-rose-500/5 to-orange-500/5',
@@ -288,7 +281,7 @@ export class WhyChooseComponent {
         {
             title: 'Quick Turnaround',
             description: 'Ditch the paper for faster processing with our automated compliance system.',
-            icon: 'zap',
+            iconUrl: 'https://cdn0.iconfinder.com/data/icons/business-glyphs-vol-2-1/52/file__resume__cv__exchange__transfer__change__move-512.png', 
             iconBgClass: 'bg-yellow-50',
             iconColor: 'text-yellow-500',
             gradientClass: 'from-yellow-500/5 to-green-500/5',
@@ -298,7 +291,7 @@ export class WhyChooseComponent {
         {
             title: 'Funding Opportunities',
             description: 'Access exclusive funding opportunities once you\'re fully compliant.',
-            icon: 'rocket',
+            iconUrl: 'https://cdn2.iconfinder.com/data/icons/thin-business-1/24/thin-1089_deal_money_business-2-512.png',
             iconBgClass: 'bg-green-50',
             iconColor: 'text-green-500',
             gradientClass: 'from-green-500/5 to-blue-500/5',
@@ -308,7 +301,7 @@ export class WhyChooseComponent {
         {
             title: 'Business Match',
             description: 'Swipe left and match with other buyers and suppliers in your industry supply chain.',
-            icon: 'users',
+            iconUrl: 'https://cdn3.iconfinder.com/data/icons/big-data-105/496/data-communication-network-connection-share-1024.png',
             iconBgClass: 'bg-rose-50',
             iconColor: 'text-rose-500',
             gradientClass: 'from-rose-500/5 to-orange-500/5',
@@ -318,7 +311,7 @@ export class WhyChooseComponent {
         {
             title: 'Supplier BEE',
             description: 'Transform your supplier database and access untapped business opportunities for a more equitable future.',
-            icon: 'heart',
+            iconUrl: 'https://cdn4.iconfinder.com/data/icons/data-management-18/64/data-aggregation-connection-compilation-information-1024.png', 
             iconBgClass: 'bg-orange-50',
             iconColor: 'text-orange-500',
             gradientClass: 'from-orange-500/5 to-yellow-500/5',
@@ -328,7 +321,7 @@ export class WhyChooseComponent {
         {
             title: 'Supplier Database',
             description: 'Unlock the full potential of your supplier database, reducing redundancies and empowering growth.',
-            icon: 'database',
+            iconUrl: 'https://cdn3.iconfinder.com/data/icons/research-and-development-5/64/analysis_data_chart_information_management-1024.png',
             iconBgClass: 'bg-blue-50',
             iconColor: 'text-blue-500',
             gradientClass: 'from-blue-500/5 to-purple-500/5',
